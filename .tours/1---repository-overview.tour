@@ -42,7 +42,8 @@
     {
       "file": "apps/meteor/client/views/root/AppRoot.tsx",
       "description": "## The Starting Point\n\n### - AppRoot is an ReactElement, Which is an Layout, Responsible for rendering Child components, It initializes the application and establishes the layout. It plays a crucial role in setting up the initial structure and behavior of the frontend.\n\n- If You want to deeply understand how things are working you can trace elements and methods used in here",
-      "line": 12
+      "line": 13,
+      "functionName":"AppRoot"
     },
     {
       "directory": "apps/meteor/private",

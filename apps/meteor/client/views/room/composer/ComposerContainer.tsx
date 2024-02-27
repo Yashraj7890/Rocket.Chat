@@ -38,6 +38,7 @@ const ComposerContainer = ({ children, ...props }: ComposerMessageProps): ReactE
 	}
 
 	if (isVoip) {
+		/* tour2_step6_anchor*/
 		return <ComposerVoIP />;
 	}
 
@@ -74,3 +75,4 @@ const ComposerContainer = ({ children, ...props }: ComposerMessageProps): ReactE
 };
 
 export default memo(ComposerContainer);
+/* tour2_step5_anchor*/

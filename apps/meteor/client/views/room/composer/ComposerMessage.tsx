@@ -24,7 +24,7 @@ export type ComposerMessageProps = {
 	onNavigateToPreviousMessage?: () => void;
 	onUploadFiles?: (files: readonly File[]) => void;
 };
-
+/* tour2_step13_anchor*/
 const ComposerMessage = ({ tmid, readOnly, onSend, ...props }: ComposerMessageProps): ReactElement => {
 	const chat = useChat();
 	const room = useRoom();
@@ -39,6 +39,7 @@ const ComposerMessage = ({ tmid, readOnly, onSend, ...props }: ComposerMessagePr
 					dispatchToastMessage({ type: 'error', message: error });
 					throw error;
 				}
+				/* tour2_step14_anchor*/
 			},
 
 			onSend: async ({ value: text, tshow, previewUrls }: { value: string; tshow?: boolean; previewUrls?: string[] }): Promise<void> => {
@@ -82,3 +83,4 @@ const ComposerMessage = ({ tmid, readOnly, onSend, ...props }: ComposerMessagePr
 };
 
 export default memo(ComposerMessage);
+/* tour2_step7_anchor*/

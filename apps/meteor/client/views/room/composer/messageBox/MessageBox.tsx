@@ -156,7 +156,7 @@ const MessageBox = ({
 	const useEmojis = useUserPreference<boolean>('useEmojis');
 
 	const handleOpenEmojiPicker: MouseEventHandler<HTMLElement> = useMutableCallback((e) => {
-		e.stopPropagation();
+		e.stopPropagation(); /* tour2_step12_anchor*/
 		e.preventDefault();
 
 		if (!useEmojis) {
@@ -344,7 +344,7 @@ const MessageBox = ({
 		items,
 		ariaActiveDescendant,
 		suspended,
-		select,
+		select /* tour2_step9_anchor*/,
 		commandsRef,
 		callbackRef: c,
 		filter,
@@ -380,6 +380,8 @@ const MessageBox = ({
 					tmid={tmid}
 					suspended={suspended}
 				/>
+
+				/* tour2_step10_anchor*/
 			)}
 			{isEditing && (
 				<MessageComposerHint
@@ -429,6 +431,7 @@ const MessageBox = ({
 								disabled={isRecording || !canSend}
 							/>
 						)}
+						{/* tour2_step11_anchor*/}
 						<MessageBoxActionsToolbar
 							canSend={canSend}
 							typing={typing}
@@ -467,3 +470,4 @@ const MessageBox = ({
 };
 
 export default memo(MessageBox);
+/* tour2_step8_anchor*/

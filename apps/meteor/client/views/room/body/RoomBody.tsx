@@ -1,4 +1,4 @@
-import type { IMessage, IUser } from '@rocket.chat/core-typings';
+import type { IMessage, IUser } from '@rocket.chat/core-typings'; /* tour2_step1_anchor*/
 import { isEditedMessage } from '@rocket.chat/core-typings';
 import {
 	usePermission,
@@ -17,7 +17,7 @@ import { useSyncExternalStore } from 'use-sync-external-store/shim';
 import { ChatMessage, RoomRoles } from '../../../../app/models/client';
 import { RoomHistoryManager } from '../../../../app/ui-utils/client';
 import { isAtBottom } from '../../../../app/ui/client/views/app/lib/scrolling';
-import { callbacks } from '../../../../lib/callbacks';
+import { callbacks } from '../../../../lib/callbacks'; /* tour2_step3_anchor*/
 import { isTruthy } from '../../../../lib/isTruthy';
 import { withDebouncing, withThrottling } from '../../../../lib/utils/highOrderFunctions';
 import ScrollableContentWrapper from '../../../components/ScrollableContentWrapper';
@@ -52,7 +52,7 @@ import { useRetentionPolicy } from './hooks/useRetentionPolicy';
 import { useUnreadMessages } from './hooks/useUnreadMessages';
 
 const RoomBody = (): ReactElement => {
-	const t = useTranslation();
+	const t = useTranslation(); /* tour2_step2_anchor*/
 	const isLayoutEmbedded = useEmbeddedLayout();
 	const room = useRoom();
 	const user = useUser();
@@ -626,7 +626,7 @@ const RoomBody = (): ReactElement => {
 								<ComposerContainer
 									subscription={subscription}
 									onResize={handleComposerResize}
-									onNavigateToPreviousMessage={handleNavigateToPreviousMessage}
+									onNavigateToPreviousMessage={handleNavigateToPreviousMessage} /* tour2_step4_anchor*/
 									onNavigateToNextMessage={handleNavigateToNextMessage}
 									onUploadFiles={handleUploadFiles}
 									// TODO: send previewUrls param
